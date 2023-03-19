@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int t, b, p, f, h, c;
+    cin >> t;
+    while (t--) {
+        cin >> b >> p >> f >> h >> c;
+        if (b <=1) {
+            cout << "0" << endl;
+        }
+        else if ((p * 2) + (f * 2) <= b) {
+            cout << (h * p) + (f * c)<<endl;
+        }
+        else if (h<c && f>(b/2)) {
+            cout << f * c << endl;;
+        }
+        else if (h > c && h > (b / 2)) {
+            cout << h * p << endl;
+        }
+        else if(h<c){
+            cout << (f * c) + ((b / 2) - f)*h<<endl;
+        }
+        else {
+            cout << (h * p) + ((b / 2) - p) * c<<endl;
+        }
+    }
+    return 0;
+}
